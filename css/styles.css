@@ -1,0 +1,764 @@
+/* Reset default margins, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'IM Fell English SC', serif;
+  color: #fff;
+  background-color: #000;
+}
+
+/* Load local MinisterStdBold font for titles, buttons, and section headers */
+@font-face {
+  font-family: 'MinisterStdBold';
+  src: url('../fonts/MinisterStdBold.otf') format('opentype');
+}
+
+/* HERO SECTION */
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/bg_img.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.top-left-icons a img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.top-left-icons a img:hover {
+  transform: scale(1.2);
+}
+
+.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  display: inline-block;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 28px;
+  background: url("../images/btn.png") no-repeat center center;
+  background-size: 100% 100%;
+  transition: transform 0.3s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Hero content */
+.hero-content {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.title {
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 128px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 80px;
+}
+
+.play-now {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+.play-now-btn {
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: url("../images/play_now.png") no-repeat center center;
+  background-size: 100% 100%;
+  transition: transform 0.3s;
+}
+
+.play-now-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer in hero */
+.hero-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 90px 0;
+  background: transparent;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-link {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 36px;
+  color: #E8D8B9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+/* INFO SECTION */
+.info-section {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/section2.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.info-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.info-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.info-content {
+  max-width: 900px;
+  margin: 140px auto 0;
+  text-align: center;
+  padding: 20px;
+}
+
+.info-content p {
+  font-family: 'IM Fell English SC', serif;
+  color: #2F1E0F;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* GETTING STARTED SECTION */
+.getting-section {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/section3.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.getting-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.getting-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.getting-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.getting-header {
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 48px;
+  color: white;
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* Layout for roadmap and steps */
+.getting-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.roadmap-container {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+
+.roadmap-container:hover {
+  transform: scale(1.05);
+}
+
+.roadmap-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Base style for step cards: full image visible with proper aspect ratio */
+.step-card {
+  width: 100%;
+  aspect-ratio: 710 / 283;
+  background: url("../images/getting.png") center center no-repeat;
+  background-size: contain;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s;
+}
+
+.step-card:hover {
+  transform: scale(1.05);
+}
+
+.step-card h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* BASIC COMMANDS BLOCK */
+.commands-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.commands-header {
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.commands-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.command-card {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.command-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.command-card:hover {
+  transform: scale(1.05);
+}
+
+.command-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/blank.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fff;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 16px;
+}
+
+.command-card:hover .command-overlay {
+  opacity: 1;
+}
+
+/* TOKENOMICS SECTION */
+.tokenomics-section {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/section3.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tokenomics-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tokenomics-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tokenomics-content {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.tokenomics-header {
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.graph-container {
+  margin-bottom: 20px;
+}
+
+.tokenomics-graph {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.tokenomics-graph:hover {
+  transform: scale(1.05);
+}
+
+.tokenomics-text {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.tokenomics-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+/* GAMEPLAY & EARN MECHANICS SECTION */
+.gameplay-section {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/section3.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.gameplay-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gameplay-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #000);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gameplay-content {
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.gameplay-header {
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.gameplay-subheader {
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.gameplay-text {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 22px;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.gameplay-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gameplay-card {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.gameplay-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gameplay-card:hover {
+  transform: scale(1.05);
+}
+
+.gameplay-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/blank2.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fff;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 16px;
+}
+
+.gameplay-card:hover .gameplay-overlay {
+  opacity: 1;
+}
+
+/* NEW button at bottom of gameplay section */
+.gameplay-btn {
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  margin-top: 40px;
+  font-family: 'MinisterStdBold', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: url("../images/btn.png") no-repeat center center;
+  background-size: 100% 100%;
+  transition: transform 0.3s;
+}
+
+.gameplay-btn:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  /* Adjust Hero Section */
+  .title {
+    font-size: 48px;
+  }
+  .play-now-btn {
+    width: 240px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 28px;
+  }
+  /* Move Play Now button higher on mobile */
+  .play-now {
+    margin-top: 40%;
+  }
+  /* Hide nav buttons on mobile */
+  .nav-btn {
+    display: none;
+  }
+  .footer-link {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+  }  
+  /* Adjust Info Section */
+  .info-section {
+    width: 100%;
+    min-height: 100vh;
+    background: url("../images/section3.png") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .info-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, transparent, #000);
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .info-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #000);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .info-content {
+    max-width: 90%;
+  }
+  .info-content p {
+    font-size: 18px;
+  }
+  
+  /* Adjust Getting Started Section */
+  .getting-header {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  .getting-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-left: 0;
+    max-width: 90%;
+  }
+  .roadmap-container {
+    max-width: 100%;
+  }
+  .steps-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 320px; /* limit overall width */
+  }
+  .step-card {
+    width: 100%;
+    aspect-ratio: 710 / 283;
+    background-size: contain;
+    padding: 15px;
+  }
+  .step-card h3 {
+    font-size: 12px;
+  }
+  .step-card p {
+    font-size: 12px;
+  }
+  .commands-header {
+    font-size: 28px;
+  }
+  .command-card {
+    width: 120px;
+    height: 120px;
+  }
+  .command-overlay {
+    font-size: 14px;
+  }
+  
+  /* Adjust Tokenomics Section */
+  .tokenomics-header {
+    font-size: 36px;
+  }
+  .tokenomics-graph {
+    max-width: 320px;
+  }
+  .tokenomics-text ul li {
+    font-size: 16px;
+  }
+  
+  /* Adjust Gameplay Section */
+  .gameplay-header {
+    font-size: 36px;
+  }
+  .gameplay-subheader {
+    font-size: 28px;
+  }
+  .gameplay-text {
+    font-size: 18px;
+  }
+  .gameplay-card {
+    max-width: 100%;
+  }
+  .gameplay-overlay {
+    font-size: 14px;
+  }
+  .gameplay-btn {
+    width: 240px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+  }
+  
+  /* Mobile Header: Stack nav and icons at top right */
+  header {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+  }
+  .top-left-icons,
+  .nav-container {
+    width: 100%;
+    text-align: right;
+    margin: 5px 0;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+}
